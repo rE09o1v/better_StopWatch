@@ -70,6 +70,7 @@ class _TimerScreenState extends ConsumerState<TimerScreen> {
   Widget _buildTodaysTotalCard(int totalDuration) {
     final hours = totalDuration ~/ 3600;
     final minutes = (totalDuration % 3600) ~/ 60;
+    final seconds = totalDuration % 60;
     
     return Container(
       width: double.infinity,
@@ -89,7 +90,7 @@ class _TimerScreenState extends ConsumerState<TimerScreen> {
           ),
           const SizedBox(height: 8),
           Text(
-            '${hours.toString().padLeft(2, '0')}:${minutes.toString().padLeft(2, '0')}',
+            '${hours.toString().padLeft(2, '0')}:${minutes.toString().padLeft(2, '0')}:${seconds.toString().padLeft(2, '0')}',
             style: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,

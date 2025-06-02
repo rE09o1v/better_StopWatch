@@ -47,6 +47,7 @@ class RecordsListScreen extends ConsumerWidget {
   Widget _buildTodaysTotalCard(int totalDuration) {
     final hours = totalDuration ~/ 3600;
     final minutes = (totalDuration % 3600) ~/ 60;
+    final seconds = totalDuration % 60;
     
     return Container(
       margin: const EdgeInsets.all(16),
@@ -67,7 +68,7 @@ class RecordsListScreen extends ConsumerWidget {
             ),
           ),
           Text(
-            '${hours.toString().padLeft(2, '0')}:${minutes.toString().padLeft(2, '0')}',
+            '${hours.toString().padLeft(2, '0')}:${minutes.toString().padLeft(2, '0')}:${seconds.toString().padLeft(2, '0')}',
             style: const TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
@@ -153,6 +154,7 @@ class RecordsListScreen extends ConsumerWidget {
     final totalDuration = dayRecords.fold(0, (sum, record) => sum + record.duration);
     final hours = totalDuration ~/ 3600;
     final minutes = (totalDuration % 3600) ~/ 60;
+    final seconds = totalDuration % 60;
     
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
@@ -168,7 +170,7 @@ class RecordsListScreen extends ConsumerWidget {
             ),
           ),
           Text(
-            '合計 ${hours.toString().padLeft(2, '0')}:${minutes.toString().padLeft(2, '0')}',
+            '合計 ${hours.toString().padLeft(2, '0')}:${minutes.toString().padLeft(2, '0')}:${seconds.toString().padLeft(2, '0')}',
             style: const TextStyle(
               fontSize: 14,
               color: AppColors.textGray,
