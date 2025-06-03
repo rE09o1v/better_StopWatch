@@ -23,7 +23,7 @@ class _RecordInputScreenState extends ConsumerState<RecordInputScreen> {
   final _tagController = TextEditingController();
   
   String? _selectedCategory;
-  List<String> _tags = [];
+  final List<String> _tags = [];
 
   @override
   void initState() {

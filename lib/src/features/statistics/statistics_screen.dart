@@ -397,11 +397,11 @@ class StatisticsScreen extends ConsumerWidget {
     final remainingSeconds = seconds % 60;
     
     if (hours > 0) {
-      return '${hours}時間${minutes}分${remainingSeconds}秒';
+      return '$hours時間$minutes分$remainingSeconds秒';
     } else if (minutes > 0) {
-      return '${minutes}分${remainingSeconds}秒';
+      return '$minutes分$remainingSeconds秒';
     } else {
-      return '${remainingSeconds}秒';
+      return '$remainingSeconds秒';
     }
   }
 } 

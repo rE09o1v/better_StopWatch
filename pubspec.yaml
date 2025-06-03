@@ -1,4 +1,4 @@
-name: stopwatch_app
+name: BSW_BetterStopWatch
 description: "A Flutter Stopwatch App MVP"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
